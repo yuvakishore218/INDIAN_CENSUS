@@ -15,8 +15,6 @@ state order by avg_sex_ratio desc;
 -- avg literacy rate
 select state,round(avg(literacy),0) avg_literacy_ratio from Indian_census..Data1 
 group by state having round(avg(literacy),0)>90 order by avg_literacy_ratio desc ;
--- top 3 state showing highest growth ratio
---select state,avg(growth)*100 avg_growth from Indian_census..Data1 group by state order by avg_growth desc limit 3;
 --bottom 3 state showing lowest sex ratio
 select top 3 state , round(avg(sex_ratio),0) avg_sex_ratio from Indian_census..Data1 group
 by state order by avg_sex_ratio asc;
